@@ -1,0 +1,14 @@
+/* ANCHOR Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* /Reset */
+
+/* ANCHOR Commons*/
+body {
+    background-color: #000;
+    color: #fff;
+}
+/* /Commons*/

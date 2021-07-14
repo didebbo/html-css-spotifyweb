@@ -14,7 +14,12 @@ body {
     font-size: 1.1em;
 }
 
-.row {
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.flex {
     display: flex;
     height: 100%;
 }
@@ -62,6 +67,16 @@ main .sidebar .content {
     margin-top: 60px;
 }
 
+main .sidebar .content .nav {
+    background-color: violet;
+}
+
+@media screen and (max-width: 600px) {
+    main .sidebar .content .nav p {
+        display: none;
+    }
+}
+
 /* /Sidebar */
 
 /* ANCHOR Content */
@@ -84,7 +99,7 @@ main .main-page {
     }
 }
 
-.main-page .header .row {
+.main-page .header .flex {
     flex-direction: row-reverse;
     align-items: center;
 }

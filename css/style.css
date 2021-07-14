@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 2em;
 }
 /* /Reset */
 
@@ -12,7 +11,15 @@ body {
     background-color: #000;
     color: #fff;
     overflow: hidden;
+    font-size: 1.2em;
 }
+
+.row {
+    display: flex;
+    height: 100%;
+    border: 2px solid red;
+}
+
 /* /Commons*/
 
 /* ANCHOR Header */
@@ -32,9 +39,24 @@ main {
     width: 100%;
     margin-top: 50px;
     height: calc(100vh - 100px);
-    overflow-y: auto;
+    overflow-y: hidden;
     background-color: burlywood;
 }
+
+/* ANCHOR Sidebar */
+.sidebar {
+    width: 400px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: crimson;
+}
+/* /Sidebar */
+
+/* ANCHOR Main Page */
+.main-page {
+    overflow-y: auto;
+}
+/* /Main Page */
 /* /Main */
 
 /* ANCHOR Footer */

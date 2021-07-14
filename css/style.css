@@ -78,14 +78,18 @@ main .sidebar .content .nav {
     }
 }
 
+main .sidebar .content .nav ul {
+    padding: 10px 0;
+}
 
 main .sidebar .content .nav li {
     position: relative;
     background-color: grey;
-    padding: 10px 20px;
+    border: 2px solid black;
+    margin: 10px 0;
 }
 
-main .sidebar .content .nav li:hover::before {
+main .sidebar .content .nav li a:hover::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -95,6 +99,12 @@ main .sidebar .content .nav li:hover::before {
     height: 100%;
 }
 
+
+main .sidebar .content .nav a {
+    /* display: inline; */
+    background-color: indianred;
+    padding: 10px;
+}
 main .sidebar .content .nav a i {
     margin-right: 5px;
 }

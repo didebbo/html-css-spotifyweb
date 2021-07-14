@@ -72,12 +72,6 @@ main .sidebar .content .nav {
     background-color: violet;
 }
 
-@media screen and (max-width: 600px) {
-    main .sidebar .content .nav p {
-        display: none;
-    }
-}
-
 main .sidebar .content .nav ul {
     padding: 10px 0;
 }
@@ -87,6 +81,12 @@ main .sidebar .content .nav li {
     background-color: grey;
     border: 2px solid black;
     margin: 10px 0;
+}
+
+main .sidebar .content .nav a {
+    /* display: inline; */
+    background-color: indianred;
+    padding: 10px;
 }
 
 main .sidebar .content .nav li a:hover::before {
@@ -99,14 +99,17 @@ main .sidebar .content .nav li a:hover::before {
     height: 100%;
 }
 
-
-main .sidebar .content .nav a {
-    /* display: inline; */
-    background-color: indianred;
-    padding: 10px;
-}
-main .sidebar .content .nav a i {
+main .sidebar .content .nav i {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    main .sidebar .content .nav a {
+        justify-content: center;
+    }
+    main .sidebar .content .nav span {
+        display: none;
+    }
 }
 
 main .sidebar .content .playlist {

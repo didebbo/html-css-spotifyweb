@@ -49,6 +49,7 @@ main .sidebar .header {
     height: 60px;
     top: 0;
     left: 0;
+    padding: 10px;
     background-color: teal;
 }
 
@@ -75,6 +76,36 @@ main .sidebar .content .nav {
     main .sidebar .content .nav p {
         display: none;
     }
+}
+
+
+main .sidebar .content .nav li {
+    position: relative;
+    background-color: grey;
+    padding: 10px 20px;
+}
+
+main .sidebar .content .nav li:hover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: greenyellow;
+    width: 4px;
+    height: 100%;
+}
+
+main .sidebar .content .nav a i {
+    margin-right: 5px;
+}
+
+main .sidebar .content .playlist {
+    background-color: orange;
+}
+
+main .sidebar .content .playlist .title {
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 /* /Sidebar */

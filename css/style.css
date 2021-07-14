@@ -23,51 +23,80 @@ body {
 /* ANCHOR Main Page */
 main {
     height: calc(100vh - 50px);
-    background-color: tan;
 }
 
 /* ANCHOR Sidebar */
 main .sidebar {
     width: 400px;
     flex-shrink: 0;
-    /* overflow: hidden; */
     background-color: crimson;
+}
+
+@media screen and (max-width: 600px) {
+    main .sidebar {
+        width: 60px;
+    }
 }
 
 main .sidebar .header {
     position: fixed;
     width: 400px;
-    height: 50px;
+    height: 60px;
     top: 0;
     left: 0;
     background-color: teal;
 }
 
+main .sidebar .header .logo {
+    height: 100%;
+}
+
+main .sidebar .header .logo .sm-logo {display: none;}
+
+@media screen and (max-width: 600px) {
+main .sidebar .header .logo .sm-logo {display: block;}
+main .sidebar .header .logo .lg-logo {display: none;}
+}
+
 main .sidebar .content {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 /* /Sidebar */
 
 /* ANCHOR Content */
 main .main-page {
-    /* width: 100%; */
-    /* flex-shrink: 0; */
     background-color: darksalmon;
-    
 }
 
 .main-page .header {
     position: fixed;
     width: calc(100% - 400px);
-    height: 50px;
+    height: 60px;
     top: 0;
     right: 0;
     background-color: thistle;
 }
 
+@media screen and (max-width: 600px) {
+    .main-page .header {
+        width: calc(100% - 60px);
+    }
+}
+
+.main-page .header .row {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.main-page .header .btn-upgrade {
+   border: 1px solid #fff;
+   border-radius: 25px;
+   padding: 5px 30px; 
+}
+
 .main-page .content {
-    margin-top: 50px;
+    margin-top: 60px;
     overflow-y: auto;
 }
 

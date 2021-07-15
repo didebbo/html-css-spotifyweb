@@ -112,7 +112,11 @@ main aside .nav > ul > li > a {
     padding: 10px 10px;
 }
 
-main aside .nav > ul > li > a:hover::before {
+main aside .nav > ul > li > a.active {
+    color: #fff;
+}
+
+main aside .nav > ul > li > a.active::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -214,6 +218,16 @@ main aside .bottom > ul > li {
     align-items: flex-start;
 }
 
+main aside .bottom > ul > li > a {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+}
+
+main aside .bottom i {
+    margin-right: 5px;
+}
+
 main aside .bottom > ul > li:first-child {
     border-bottom: 1px solid gray;
     font-size: 0.8em;
@@ -243,14 +257,8 @@ main aside .bottom > ul > li:last-child i {
     background-color: #fff;
 }
 
-main aside .bottom > ul > li > a {
-    display: flex;
-    padding: 5px 0;
-    align-items: center;
-}
-
-main aside .bottom i {
-    margin-right: 5px;
+main aside .bottom > ul > li:last-child > a:hover i {
+    color: #707070;
 }
 
 @media screen and (max-width: 600px) {

@@ -169,12 +169,17 @@ main aside .create-playlist > ul > li > a {
     align-items: center;
 } 
 
-main aside .create-playlist > ul > li .icon {
+main aside .create-playlist > ul > li > a .icon {
     padding: 5px 10px;
     margin-right: 5px;
-    background-color: #fff;
+    background-color: #707070;
     color: #000;
     font-size: 1.5em;
+    transition: 0.2s;
+}
+
+main aside .create-playlist > ul > li > a:hover .icon {
+    background-color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -370,6 +375,46 @@ main .main-app .middle nav > ul > li > a.active::after {
     left: 50%;
     transform: translate(-50%);
     background-color: #ADFF2F;
+}
+
+main .main-app .middle .content {
+    display: flex;
+    flex-direction: column;
+    background-color: slateblue;
+    padding: 20px;
+}
+
+main .main-app .middle .content .recent-play {
+    display: flex;
+    flex-direction: column;
+    background-color: springgreen;
+}
+
+main .main-app .middle .content .recent-play .list {
+    display: flex;
+    /* flex-wrap: wrap; */
+    background-color: tan;
+}
+
+main .main-app .middle .content .recent-play .list li {
+    width: calc(100% / 6);
+}
+
+main .main-app .middle .content .recent-play .list .card {
+    display: flex;
+    flex-direction: column;
+    background-color: teal;
+}
+
+main .main-app .middle .content .recent-play .list .card .album {
+    display: flex;
+    background-color: tomato;
+}
+
+main .main-app .middle .content .recent-play .list .card .album img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 /* /Middle */
 

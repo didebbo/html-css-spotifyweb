@@ -288,6 +288,12 @@ main .main-app {
     background-color: darksalmon;
 }
 
+main .main-app a {
+    color: #fff;
+}
+
+
+/* ANCHOR Header */
 main .main-app .header {
     position: fixed;
     display: flex;
@@ -319,13 +325,38 @@ main .main-app .header .cta-upgrade:hover {
    background-color: #fff;
    transform: scale(1.1); 
 }
+/* /Header */
 
-.main-page .content {
+/* ANCHOR Middle */
+main .main-app .middle {
     margin-top: 60px;
-    overflow-y: auto;
+    overflow: auto;
 }
 
-/* /Content */
+main .main-app .middle > nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    /* background-color: green; */
+}
+
+main .main-app .middle nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(105, 23, 64);
+}
+
+main .main-app .middle nav > ul > li {
+    margin: 10px;
+}
+
+main .main-app .middle nav > ul > li > a {
+    background-color: indianred;
+
+}
+
+/* /Middle */
 
 /* /Main Page */
 

@@ -37,12 +37,11 @@ main aside {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     height: 100%;
     flex-shrink: 0;
     width: 250px;
     font-weight: bold;
-    background-color: crimson;
+    background-color: #000;
 }
 
 @media screen and (max-width: 600px) {
@@ -56,7 +55,6 @@ main aside .logo {
     flex-shrink: 0;
     height: 60px;
     padding: 10px;
-    background-color: teal;
 }
 
 @media screen and (max-width: 600px) {
@@ -82,7 +80,6 @@ main aside .logo .lg-logo {display: none;}
 }
 
 main aside .nav {
-    background-color: violet;
     margin-top: 5px;
 }
 
@@ -95,18 +92,17 @@ main aside .nav > ul > li {
     position: relative;
 }
 
-main aside .nav a {
+main aside .nav > ul > li > a {
     display: flex;
-    background-color:cornflowerblue;
+    align-items: center;
     padding: 10px 10px;
 }
 
-main aside .nav li a:hover::before {
+main aside .nav > ul > li > a:hover::before {
     position: absolute;
     top: 0;
     left: 0;
     content: "";
-    background-color: #ADFF2F;
     width: 4px;
     height: 100%;
 }
@@ -117,7 +113,7 @@ main aside .nav i {
 }
 
 @media screen and (max-width: 600px) {
-    main aside .nav a {
+    main aside .nav > ul > li > a {
         justify-content: center;
     }
     
@@ -131,24 +127,21 @@ main aside .nav i {
 
 main aside .create-playlist {
     padding: 10px;
-    background-color: forestgreen;
 }
 
 main aside .create-playlist > ul {
     display: flex;
     flex-direction: column;
-    background-color: fuchsia;
 }
 
 main aside .create-playlist > ul > li {
     display: flex;
     padding: 5px 0;
-    background-color: gold;
 }
 
 main aside .create-playlist > ul > li > a {
     display: flex;
-    background-color: orange;
+    align-items: center;
 } 
 
 main aside .create-playlist > ul > li .icon {
@@ -159,10 +152,6 @@ main aside .create-playlist > ul > li .icon {
     font-size: 1.5em;
 }
 
-main aside .create-playlist > ul > li .txt {
-    align-self: center;
-}
-
 @media screen and (max-width: 600px) {
     main aside .create-playlist {
         display: none;
@@ -170,7 +159,6 @@ main aside .create-playlist > ul > li .txt {
 }
 
 main aside .my-list {
-    background-color: palegoldenrod;
     height: 100%;
     overflow: auto;
 }
@@ -189,12 +177,12 @@ main aside .my-list > ul > li {
 
 main aside .my-list > ul > li a {
     padding: 5px;
-    background-color: palevioletred;
 }
 
-main aside .bottom {
-    background-color: peru;
-    align-self: flex-end;
+@media screen and (max-width: 600px) {
+    main aside .my-list {
+        display: none;
+    }
 }
 
 main aside .bottom > ul {
@@ -208,17 +196,42 @@ main aside .bottom > ul > li {
     align-items: flex-start;
 }
 
+main aside .bottom > ul > li:first-child {
+    border-bottom: 1px solid gray;
+    font-size: 0.8em;
+}
+
+main aside .bottom > ul > li:last-child {
+    font-size: 1.2em;
+}
+
+main aside .bottom > ul > li:first-child i {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+main aside .bottom > ul > li:last-child i {
+    padding: 2.5px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 main aside .bottom > ul > li > a {
     display: flex;
     padding: 5px 0;
+    align-items: center;
 }
 
 main aside .bottom i {
-    padding-right: 5px;
+    margin-right: 5px;
 }
 
-main aside .bottom p {
-    line-height: 14px;
+@media screen and (max-width: 600px) {
+    main aside .bottom {
+        display: none;
+    }
 }
 /* /Sidebar */
 

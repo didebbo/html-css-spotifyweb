@@ -18,6 +18,7 @@ body {
 
 a {
     text-decoration: none;
+    transition: 0.2s;
 }
 
 li {
@@ -29,6 +30,7 @@ li {
 main {
     display: flex;
     height: calc(100vh - 50px);
+    font-weight: bold;
 }
 
 /* ANCHOR Sidebar */
@@ -39,7 +41,6 @@ main aside {
     height: 100%;
     flex-shrink: 0;
     width: 250px;
-    font-weight: bold;
     background-color: #000;
 }
 
@@ -63,6 +64,7 @@ main aside .bottom a:hover {
     color: #fff;
 }
 
+/* ANCHOR Logo */
 main aside .logo {
     display: flex;
     flex-shrink: 0;
@@ -91,7 +93,9 @@ main aside .logo .sm-logo {display: none;}
 main aside .logo .sm-logo {display: block;}
 main aside .logo .lg-logo {display: none;}
 }
+/* /Logo */
 
+/* ANCHOR Navbar */
 main aside .nav {
     margin-top: 5px;
     
@@ -143,7 +147,9 @@ main aside .nav i {
         display: none;
     }
 }
+/* /Navbar */
 
+/* ANCHOR Create Playlist */
 main aside .create-playlist {
     padding: 10px;
 }
@@ -176,7 +182,9 @@ main aside .create-playlist > ul > li .icon {
         display: none;
     }
 }
+/* /Create Playlist */
 
+/* ANCHOR Playlist */
 main aside .my-list {
     overflow: auto;
 }
@@ -193,7 +201,7 @@ main aside .my-list > ul > li {
     align-items: flex-start;
 }
 
-main aside .my-list > ul > li a {
+main aside .my-list > ul > li > a {
     padding: 5px;
 }
 
@@ -202,9 +210,11 @@ main aside .my-list > ul > li a {
         display: none;
     }
 }
+/* /Playlist */
 
+/* ANCHOR Bottom */
 main aside .bottom {
-   margin-top: auto; 
+   margin-top: auto;
 }
 
 main aside .bottom > ul {
@@ -218,16 +228,6 @@ main aside .bottom > ul > li {
     align-items: flex-start;
 }
 
-main aside .bottom > ul > li > a {
-    display: flex;
-    padding: 5px 0;
-    align-items: center;
-}
-
-main aside .bottom i {
-    margin-right: 5px;
-}
-
 main aside .bottom > ul > li:first-child {
     border-bottom: 1px solid gray;
     font-size: 0.8em;
@@ -237,7 +237,22 @@ main aside .bottom > ul > li:last-child {
     font-size: 1.2em;
 }
 
-main aside .bottom > ul > li:first-child i {
+main aside .bottom > ul > li > a {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+}
+
+main aside .bottom > ul > li:last-child > a {
+    transition: 0s;
+    color: #fff;
+}
+
+main aside .bottom > ul > li > a > i {
+    margin-right: 5px;
+}
+
+main aside .bottom > ul > li:first-child > a > i  {
     background-color: #707070;
     border: 1px solid #707070;
     color: #000;
@@ -249,15 +264,12 @@ main aside .bottom > ul > li:first-child > a:hover i {
     border: 1px solid #fff;
 } 
 
-main aside .bottom > ul > li:last-child i {
+main aside .bottom > ul > li:last-child > a > i {
     padding: 5px;
     margin-top: 5px;
     border-radius: 50%;
     overflow: hidden;
     background-color: #fff;
-}
-
-main aside .bottom > ul > li:last-child > a:hover i {
     color: #707070;
 }
 
@@ -266,17 +278,21 @@ main aside .bottom > ul > li:last-child > a:hover i {
         display: none;
     }
 }
+/*/Bottom */
 /* /Sidebar */
 
-/* ANCHOR Content */
-main .main-page {
+/* ANCHOR Main App */
+main .main-app {
     display: flex;
     flex-direction: column;
     background-color: darksalmon;
 }
 
-.main-page .header {
+main .main-app .header {
     position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     width: calc(100% - 250px);
     height: 60px;
     top: 0;
@@ -285,20 +301,23 @@ main .main-page {
 }
 
 @media screen and (max-width: 600px) {
-    .main-page .header {
+    main .main-app .header {
         width: calc(100% - 50px);
     }
 }
 
-.main-page .header .flex {
-    flex-direction: row-reverse;
-    align-items: center;
+main .main-app .header .cta-upgrade {
+   border: 2px solid #fff;
+   color: #fff;
+   border-radius: 25px;
+   margin: 20px;
+   padding: 5px 30px; 
 }
 
-.main-page .header .btn-upgrade {
-   border: 1px solid #fff;
-   border-radius: 25px;
-   padding: 5px 30px; 
+main .main-app .header .cta-upgrade:hover {
+   color: #000;
+   background-color: #fff;
+   transform: scale(1.1); 
 }
 
 .main-page .content {

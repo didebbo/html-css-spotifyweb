@@ -340,6 +340,14 @@ main .main-app .middle > nav {
     padding: 10px;
 }
 
+main .main-app .middle > nav a {
+    color: #707070;
+}
+
+main .main-app .middle > nav a:hover {
+    color: #fff;
+}
+
 main .main-app .middle nav > ul {
     display: flex;
     flex-wrap: wrap;
@@ -350,6 +358,9 @@ main .main-app .middle nav > ul > li {
     margin: 10px;
 }
 
+main .main-app .middle nav > ul > li > a.active {
+    color: #fff;
+}
 main .main-app .middle nav > ul > li > a.active::after {
     display: block;
     position: relative;

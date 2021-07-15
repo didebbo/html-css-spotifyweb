@@ -146,7 +146,13 @@ main .sidebar .content .playlist {
     }
 }
 
-main .sidebar .content .playlist li {
+main .sidebar .content .playlist > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main .sidebar .content .playlist > ul > li {
     margin: 10px 0;
 }
 
@@ -171,21 +177,21 @@ main .sidebar .content .playlist .list {
     background-color: darkseagreen;
 }
 
-main .sidebar .content .playlist .list ul {
+main .sidebar .content .playlist .list > ul {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     max-height: 200px;
     overflow: auto;
 }
 
-main .sidebar .content .playlist .list li {
-    margin: 0;
+main .sidebar .content .playlist .list > ul > li {
+    display: flex;
     background-color: darkslateblue;
 }
 
 main .sidebar .content .playlist .list li a {
-    display: block;
-    padding: 5px 0;
+    padding: 10px;
     background-color: darkslategray;
 }
 

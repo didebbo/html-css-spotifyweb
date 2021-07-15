@@ -33,7 +33,9 @@ main {
 }
 
 /* ANCHOR Sidebar */
-main .sidebar {
+main aside {
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
     /* align-items: flex-start; */
@@ -43,68 +45,72 @@ main .sidebar {
 }
 
 @media screen and (max-width: 600px) {
-    main .sidebar {
+    main aside {
         width: 50px;
     }
 }
 
-main .sidebar .logo {
+main aside .logo {
     display: flex;
+    flex-shrink: 0;
     height: 60px;
     padding: 10px;
     background-color: teal;
 }
 
 @media screen and (max-width: 600px) {
-    main .sidebar .logo {
+    main aside .logo {
         height: 50px;
         padding: 0;
     }
 
-    main .sidebar .logo a {
+    main aside .logo a {
         padding: 10px;
     }
 }
 
-main .sidebar .logo img {
+main aside .logo img {
     height: 100%;
 }
 
-main .sidebar .logo .sm-logo {display: none;}
+main aside .logo .sm-logo {display: none;}
 
 @media screen and (max-width: 600px) {
-main .sidebar .logo .sm-logo {display: block;}
-main .sidebar .logo .lg-logo {display: none;}
+main aside .logo .sm-logo {display: block;}
+main aside .logo .lg-logo {display: none;}
 }
 
-main .sidebar .content {
+main aside .content {
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
     font-weight: bold;
     background-color: brown;
 }
 
-main .sidebar .content .nav {
+main aside .content .nav {
     background-color: violet;
     margin-top: 5px;
 }
 
-main .sidebar .content .nav ul {
+main aside .content .nav ul {
     display: flex;
     flex-direction: column;
 }
 
-main .sidebar .content .nav li {
+main aside .content .nav li {
     position: relative;
 }
 
-main .sidebar .content .nav a {
+main aside .content .nav a {
     display: flex;
     background-color:cornflowerblue;
     padding: 10px 10px;
 }
 
-main .sidebar .content .nav li a:hover::before {
+main aside .content .nav li a:hover::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,97 +120,130 @@ main .sidebar .content .nav li a:hover::before {
     height: 100%;
 }
 
-main .sidebar .content .nav i {
+main aside .content .nav i {
     margin-right: 10px;
     font-size: 1.2em;
 }
 
 @media screen and (max-width: 600px) {
-    main .sidebar .content .nav a {
+    main aside .content .nav a {
         justify-content: center;
     }
     
-    main .sidebar .content .nav i {
+    main aside .content .nav i {
     margin-right: 0;
 }
-    main .sidebar .content .nav span {
+    main aside .content .nav span {
         display: none;
     }
 }
 
-main .sidebar .content .playlist {
+main aside .content .playlist {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: orange;
     padding: 10px;
+    overflow: auto;
 }
 
 @media screen and (max-width: 600px) {
-    main .sidebar .content .playlist {
+    main aside .content .playlist {
         display: none;
     }
 }
 
-main .sidebar .content .playlist > ul {
+main aside .content .playlist > ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-main .sidebar .content .playlist > ul > li {
-    margin: 10px 0;
+main aside .content .playlist > ul > li {
+    margin: 5px 0;
 }
 
-main .sidebar .content .playlist .title {
+main aside .content .playlist .title {
     font-size: 1.1em;
 }
 
-main .sidebar .content .playlist .create-playlist a {
+main aside .content .playlist .create-playlist a {
     display: flex;
 }
 
-main .sidebar .content .playlist .create-playlist i {
+main aside .content .playlist .create-playlist i {
     font-size: 2em;
     padding-right: 5px;
 }
 
-main .sidebar .content .playlist .create-playlist p {
+main aside .content .playlist .create-playlist p {
     line-height: 30px;
 }
 
-main .sidebar .content .playlist .list {
+main aside .content .playlist .list {
     background-color: darkseagreen;
 }
 
-main .sidebar .content .playlist .list > ul {
+main aside .content .playlist .list > ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-height: 200px;
+    /* height: 100px; */
+    flex-shrink: 0;
     overflow: auto;
+    background-color: deeppink;
 }
 
-main .sidebar .content .playlist .list > ul > li {
+main aside .content .playlist .list > ul > li {
     display: flex;
     background-color: darkslateblue;
 }
 
-main .sidebar .content .playlist .list li a {
-    padding: 10px;
+main aside .content .playlist .list li a {
+    padding: 5px 0;
     background-color: darkslategray;
 }
+
+
+main aside .bottom > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+main aside .bottom > ul > li {
+    display: flex;
+    align-items: flex-start;
+}
+
+main aside .bottom > ul > li > a {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px 0;
+}
+
+main aside .bottom i {
+    padding-right: 5px;
+}
+
+main aside .bottom p {
+    line-height: 14px;
+}
+
 
 /* /Sidebar */
 
 /* ANCHOR Content */
 main .main-page {
+    display: flex;
+    flex-direction: column;
     background-color: darksalmon;
 }
 
 .main-page .header {
     position: fixed;
-    width: calc(100% - 400px);
+    width: calc(100% - 250px);
     height: 60px;
     top: 0;
     right: 0;
@@ -213,7 +252,7 @@ main .main-page {
 
 @media screen and (max-width: 600px) {
     .main-page .header {
-        width: calc(100% - 60px);
+        width: calc(100% - 50px);
     }
 }
 

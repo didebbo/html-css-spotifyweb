@@ -392,12 +392,14 @@ main .main-app .middle .content .recent-play {
 
 main .main-app .middle .content .recent-play .list {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     background-color: tan;
 }
 
 main .main-app .middle .content .recent-play .list li {
+    /* min-width: 50px; */
     width: calc(100% / 6);
+    margin-right:10px;
 }
 
 main .main-app .middle .content .recent-play .list .card {
@@ -407,15 +409,20 @@ main .main-app .middle .content .recent-play .list .card {
 }
 
 main .main-app .middle .content .recent-play .list .card .album {
+    width: 100%;
     display: flex;
-    background-color: tomato;
+}
+
+main .main-app .middle .content .recent-play .list .card .album::after {
+    display: block;
+    content: "";
+    padding-top: 100%;
 }
 
 main .main-app .middle .content .recent-play .list .card .album img {
     width: 100%;
-    object-fit: cover;
-    object-position: center;
 }
+
 /* /Middle */
 
 /* /Main Page */

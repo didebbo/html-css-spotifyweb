@@ -285,7 +285,7 @@ main aside .bottom > ul > li:last-child > a > i {
 main .main-app {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(41, 36, 35); */
+    width: 100%;
 }
 
 main .main-app a {
@@ -333,7 +333,8 @@ main .main-app .middle {
 }
 
 main .main-app .middle > nav {
-    display: flex;
+    display: block;
+    width: 100%;
     justify-content: center;
     margin-top: 60px;
     padding: 10px;
@@ -349,9 +350,16 @@ main .main-app .middle nav > ul > li {
     margin: 10px;
 }
 
-main .main-app .middle nav > ul > li > a.active {
+main .main-app .middle nav > ul > li > a.active::after {
+    display: block;
+    position: relative;
+    content: "";
+    width: 50%;
+    height: 2px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #ADFF2F;
 }
-
 /* /Middle */
 
 /* /Main Page */

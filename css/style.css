@@ -72,6 +72,10 @@ main aside .logo {
     padding: 10px;
 }
 
+main aside .logo a {
+    transition: 0s;
+}
+
 @media screen and (max-width: 600px) {
     main aside .logo {
         height: 50px;
@@ -410,6 +414,26 @@ main .main-app .middle .content .recent-play .list .card {
 
 main .main-app .middle .content .recent-play .list .card .album {
     display: flex;
+    position: relative;
+}
+
+main .main-app .middle .content .recent-play .list .card .album:hover::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+} 
+
+main .main-app .middle .content .recent-play .list .card .album:hover::after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: 3em;
+    content: "\f144";
+    /* z-index: 2; */
 }
 
 main .main-app .middle .content .recent-play .list .card .album::after {

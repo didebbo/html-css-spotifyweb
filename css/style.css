@@ -8,7 +8,7 @@
 
 /* ANCHOR Commons*/
 body {
-    background-color: #000;
+    background-color: #141922;
     color: #fff;
     overflow: hidden;
     font-size: 1.1em;
@@ -285,7 +285,7 @@ main aside .bottom > ul > li:last-child > a > i {
 main .main-app {
     display: flex;
     flex-direction: column;
-    background-color: darksalmon;
+    /* background-color: rgb(41, 36, 35); */
 }
 
 main .main-app a {
@@ -303,7 +303,7 @@ main .main-app .header {
     height: 60px;
     top: 0;
     right: 0;
-    background-color: thistle;
+    background-color: rgba(20, 25, 34, 0.9)
 }
 
 @media screen and (max-width: 600px) {
@@ -329,31 +329,27 @@ main .main-app .header .cta-upgrade:hover {
 
 /* ANCHOR Middle */
 main .main-app .middle {
-    margin-top: 60px;
     overflow: auto;
 }
 
 main .main-app .middle > nav {
     display: flex;
     justify-content: center;
+    margin-top: 60px;
     padding: 10px;
-    /* background-color: green; */
 }
 
 main .main-app .middle nav > ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(105, 23, 64);
 }
 
 main .main-app .middle nav > ul > li {
     margin: 10px;
 }
 
-main .main-app .middle nav > ul > li > a {
-    background-color: indianred;
-
+main .main-app .middle nav > ul > li > a.active {
 }
 
 /* /Middle */

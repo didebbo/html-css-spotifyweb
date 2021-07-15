@@ -174,7 +174,6 @@ main aside .create-playlist > ul > li .icon {
 }
 
 main aside .my-list {
-    height: 100%;
     overflow: auto;
 }
 
@@ -198,6 +197,10 @@ main aside .my-list > ul > li a {
     main aside .my-list {
         display: none;
     }
+}
+
+main aside .bottom {
+   margin-top: auto; 
 }
 
 main aside .bottom > ul {

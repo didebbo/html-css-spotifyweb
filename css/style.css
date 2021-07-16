@@ -303,7 +303,7 @@ main .main-app a {
 
 
 /* ANCHOR Header */
-main .main-app .header {
+main .main-app > .header {
     position: fixed;
     display: flex;
     flex-direction: row-reverse;
@@ -316,12 +316,12 @@ main .main-app .header {
 }
 
 @media screen and (max-width: 600px) {
-    main .main-app .header {
+    main .main-app > .header {
         width: calc(100% - 50px);
     }
 }
 
-main .main-app .header .cta-upgrade {
+main .main-app > .header .cta-upgrade {
    border: 2px solid #fff;
    color: #fff;
    border-radius: 25px;
@@ -329,7 +329,7 @@ main .main-app .header .cta-upgrade {
    padding: 5px 30px; 
 }
 
-main .main-app .header .cta-upgrade:hover {
+main .main-app > .header .cta-upgrade:hover {
    color: #000;
    background-color: #fff;
    transform: scale(1.1); 
@@ -387,6 +387,7 @@ main .main-app .middle .content {
     padding: 20px;
 }
 
+/* ANCHOR Recent Play */
 main .main-app .middle .content .recent-play {
     display: flex;
     flex-direction: column;
@@ -465,6 +466,60 @@ main .main-app .middle .content .recent-play .list .card .info > li {
     display: flex;
     padding: 5px 0;
 }
+
+main .main-app .middle .content .recent-play .list .card .info .subtitle a {
+    color: #707070;
+}
+
+/* /Recent Play */
+
+/* ANCHOR Creato Per Te */
+main .main-app .middle .content .for-you {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main .main-app .middle .content .for-you > .header > .title {
+    margin-bottom: 5px;
+}
+
+main .main-app .middle .content .for-you > .header > .subtitle {
+    color: #707070;
+}
+
+main .main-app .middle .content .for-you .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    margin-left: -10px;
+}
+
+main .main-app .middle .content .for-you .list .card {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 6);
+    max-width: 200px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+main .main-app .middle .content .for-you .list .card .album {
+    display: flex;
+}
+
+main .main-app .middle .content .for-you .list .card .album img {
+    width: 100%;
+}
+
+main .main-app .middle .content .for-you .list .card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* /Creato Per Te */
 
 /* /Middle */
 

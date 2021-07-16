@@ -683,20 +683,20 @@ footer .player .player-left .items .actions > li > a {
 footer .player .player-center {
     display: flex;
     justify-content: center;
-    /* padding: 10px; */
     flex-grow: 1;
-    background-color: teal;
 }
 
 footer .player .player-center .player-control {
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
-    background-color: tomato;
+    /* align-items: center; */
 }
 
 footer .player .player-center .player-control .actions {
     display: flex;
+    justify-content: center;
     font-size: 1.2em;
 }
 
@@ -716,6 +716,7 @@ footer .player .player-center .player-control .actions > li #play-button {
 
 footer .player .player-center .player-control .status {
     display: flex;
+    align-items: center;
 }
 
 footer .player .player-center .player-control .status > li {
@@ -725,6 +726,34 @@ footer .player .player-center .player-control .status > li {
 footer .player .player-center .player-control .status > li > a {
     color: #fff;
 }
+
+footer .player .player-center .player-control .status #current-status {
+    display: flex;
+    flex-grow: 1;
+    height: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+}
+
+footer .player .player-center .player-control .status #current-status a {
+    display: flex;
+    width: 100%;
+    background-color: #707070;    
+}
+
+footer .player .player-center .player-control .status #current-status a::before {
+    content: "";
+    width: 20%;
+    background-color: #fff;
+}
+
+footer .player .player-center .player-control .status #current-status a:hover::before {
+    width: 100%;
+    transition: 20s;
+}
+
+
 
 
 /* /Player */

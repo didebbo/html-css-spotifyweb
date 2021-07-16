@@ -619,9 +619,14 @@ footer .player {
     justify-content: space-between;
 }
 
-footer .player > li:first-child,
-footer .player > li:last-child {
+footer .player > li:first-child {
     width: 250px;
+    flex-shrink: 0;
+    background-color: #ADFF2F;
+}
+
+footer .player > li:last-child {
+    background-color: bisque;
 }
 
 /* ANCHOR Player Left */
@@ -688,10 +693,9 @@ footer .player .player-center {
 
 footer .player .player-center .player-control {
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
 }
 
 footer .player .player-center .player-control .actions {
@@ -717,6 +721,7 @@ footer .player .player-center .player-control .actions > li #play-button {
 footer .player .player-center .player-control .status {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 footer .player .player-center .player-control .status > li {
@@ -729,7 +734,7 @@ footer .player .player-center .player-control .status > li > a {
 
 footer .player .player-center .player-control .status #current-status {
     display: flex;
-    flex-grow: 1;
+    width: 50%;
     height: 5px;
     border-radius: 20px;
     overflow: hidden;

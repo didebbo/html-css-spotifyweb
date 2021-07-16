@@ -624,7 +624,6 @@ footer .player > li:first-child,
 footer .player > li:last-child {
     width: 250px;
     flex-shrink: 0;
-    background-color: greenyellow;
 }
 
 @media screen and (max-width: 1100px) {
@@ -781,7 +780,6 @@ footer .player .player-right {
 
 footer .player .player-right .media-control {
     display: flex;
-    /* flex-direction: row-reverse; */
     justify-content: flex-end;
     width: 100%;
     padding: 0 10px;
@@ -793,16 +791,67 @@ footer .player .player-right .media-control > li
     padding: 0 10px;
 } 
 
+footer .player .player-right .media-control #volume {
+    display: flex;
+}
+
+footer .player .player-right .media-control #volume > button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: 0;
+}
+
+footer .player .player-right .media-control #volume > button i:first-child {
+    float: left;
+    color: #fff;
+}
+
+footer .player .player-right .media-control #volume > button i:last-child {
+    position: absolute;
+    color: #ff2f2f;
+}
+
+footer .player .player-right .media-control #volume > button:hover i:first-child {
+    color: #ADFF2F;
+}
+
+footer .player .player-right .media-control #volume > button:focus i:first-child {
+    color: rgba(255, 255, 255, 0);
+}
+
+footer .player .player-right .media-control #volume > button:not(:focus) i:last-child {
+    color: rgba(255, 255, 255, 0);
+}
+
 footer .player .player-right .media-control #current-volume {
     display: flex;
     width: 50%;
-    /* min-width: 100px; */
-    /* flex-shrink: 0; */
     height: 5px;
     border-radius: 20px;
     overflow: hidden;
     padding: 0;
-    background-color: #707070;
+}
+
+footer .player .player-right .media-control #current-volume a {
+    display: flex;
+    width: 100%;
+    background-color: #707070;    
+}
+
+footer .player .player-right .media-control #current-volume a::before {
+    content: "";
+    width: 60%;
+    background-color: #fff;
+}
+
+footer .player .player-right .media-control #current-volume a:hover::before {
+    background-color: #ADFF2F; 
+}
+
+footer .player .player-right .media-control > li > a {
+    color: #fff;
 }
 
 /* /Player Right*/

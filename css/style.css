@@ -401,15 +401,12 @@ main .main-app .middle .content .recent-play .list {
     margin-left: -10px;
 }
 
-main .main-app .middle .content .recent-play .list > ul > li {
-    width: calc(100% / 5);
-    max-width: 200px;
-    padding-left: 10px;
-}
-
 main .main-app .middle .content .recent-play .list .card {
     display: flex;
     flex-direction: column;
+    width: calc(100% / 5);
+    max-width: 200px;
+    padding-left: 10px;
 }
 
 main .main-app .middle .content .recent-play .list .card .album {
@@ -433,7 +430,6 @@ main .main-app .middle .content .recent-play .list .card .album:hover::after {
     font-weight: 900; 
     font-size: 3em;
     content: "\f144";
-    /* z-index: 2; */
 }
 
 main .main-app .middle .content .recent-play .list .card .album::after {
@@ -451,18 +447,10 @@ main .main-app .middle .content .recent-play .list .card .info {
     flex-direction: column;
     align-items: center;
     padding: 5px 0;
-    background-color: wheat;
 }
 
-main .main-app .middle .content .recent-play .list .card .info > ul {
+main .main-app .middle .content .recent-play .list .card .info > li {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main .main-app .middle .content .recent-play .list .card .info > ul > li {
-    display: flex;
-    background-color: teal;
     padding: 5px 0;
 }
 

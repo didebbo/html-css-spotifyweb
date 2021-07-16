@@ -619,15 +619,22 @@ footer .player {
     justify-content: space-between;
 }
 
+footer .player > li:first-child,
+footer .player > li:last-child {
+    width: 250px;
+}
+
+/* ANCHOR Player Left */
 footer .player .player-left {
     display: flex;
     justify-content: space-between;
-    width: 20%;
     padding: 10px;
 }
 
 footer .player .player-left .items {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 footer .player .player-left .items .album {
@@ -662,6 +669,42 @@ footer .player .player-left .items .actions {
     display: flex;
     align-items: center;
 }
+
+footer .player .player-left .items .actions > li {
+    padding: 5px;
+}
+
+footer .player .player-left .items .actions > li > a {
+    color: #707070;
+}
+/* /Player Left */
+
+/* ANCHOR Player Center */
+footer .player .player-center {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-grow: 1;
+    background-color: teal;
+}
+
+footer .player .player-center .player-control {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .player .player-center .player-control .actions {
+    display: flex;
+}
+
+footer .player .player-center .player-control .actions > li {
+    padding: 10px;
+}
+
+footer .player .player-center .player-control .actions > li > a {
+    color: #fff;
+}
+
 
 /* /Player */
 

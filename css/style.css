@@ -683,7 +683,7 @@ footer .player .player-left .items .actions > li > a {
 footer .player .player-center {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
     flex-grow: 1;
     background-color: teal;
 }
@@ -691,17 +691,38 @@ footer .player .player-center {
 footer .player .player-center .player-control {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: tomato;
 }
 
 footer .player .player-center .player-control .actions {
     display: flex;
+    font-size: 1.2em;
 }
 
 footer .player .player-center .player-control .actions > li {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
 
 footer .player .player-center .player-control .actions > li > a {
+    color: #fff;
+}
+
+footer .player .player-center .player-control .actions > li #play-button {
+    font-size: 1.5em;
+}
+
+footer .player .player-center .player-control .status {
+    display: flex;
+}
+
+footer .player .player-center .player-control .status > li {
+    padding: 0 10px;
+}
+
+footer .player .player-center .player-control .status > li > a {
     color: #fff;
 }
 

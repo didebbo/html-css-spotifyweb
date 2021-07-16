@@ -667,11 +667,16 @@ footer .player .player-left .items .album .item .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
-footer .player .player-left .items .album .item .info .subtitle {
+footer .player .player-left .items .album .item .info .title a {
+    color: #fff;
+}
+
+footer .player .player-left .items .album .item .info .subtitle a {
     color: #707070;
+    font-size: 0.9em;
 }
 
 footer .player .player-left .items .actions {
@@ -686,6 +691,20 @@ footer .player .player-left .items .actions > li {
 footer .player .player-left .items .actions > li > a {
     color: #707070;
 }
+
+footer .player .player-left .items .actions > li > a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+footer .player .player-left .items .actions > #heart > a:hover {
+    color: #DC3545;
+}
+
+footer .player .player-left .items .actions > #folder > a:hover {
+    color: #FFC107;
+}
+
 /* /Player Left */
 
 /* ANCHOR Player Center */
@@ -718,6 +737,11 @@ footer .player .player-center .player-control .actions > li > a {
     color: #fff;
 }
 
+footer .player .player-center .player-control .actions > li > a:hover {
+    color: #ADFF2F;
+    text-shadow: 0px 0px 10px #fff;
+}
+
 footer .player .player-center .player-control .actions > li #play-button {
     font-size: 1.5em;
 }
@@ -745,6 +769,10 @@ footer .player .player-center .player-control .status #current-status {
     padding: 0;
 }
 
+footer .player .player-center .player-control .status #current-status:hover {
+    box-shadow: 0px 0px 3px #fff;
+} 
+
 footer .player .player-center .player-control .status #current-status a {
     display: flex;
     width: 100%;
@@ -755,11 +783,12 @@ footer .player .player-center .player-control .status #current-status a::before 
     content: "";
     width: 20%;
     background-color: #fff;
+    border-radius: 20px;
 }
 
 footer .player .player-center .player-control .status #current-status a:hover::before {
     background-color: #ADFF2F;
-    animation: play 20s linear forwards; 
+    animation: play 220s linear forwards; 
 }
 
 @keyframes play {
@@ -791,6 +820,11 @@ footer .player .player-right .media-control > li
     padding: 0 10px;
 } 
 
+footer .player .player-right .media-control > li > a:hover {
+    color: #ADFF2F;
+    text-shadow: 0px 0px 10px #fff;
+}
+
 footer .player .player-right .media-control #volume {
     display: flex;
 }
@@ -801,6 +835,10 @@ footer .player .player-right .media-control #volume > button {
     flex-direction: column;
     background-color: transparent;
     border: 0;
+}
+
+footer .player .player-right .media-control #volume > button:hover {
+    text-shadow: 0px 0px 10px #fff;
 }
 
 footer .player .player-right .media-control #volume > button i:first-child {
@@ -832,6 +870,10 @@ footer .player .player-right .media-control #current-volume {
     border-radius: 20px;
     overflow: hidden;
     padding: 0;
+}
+
+footer .player .player-right .media-control #current-volume:hover {
+        box-shadow: 0px 0px 3px #fff;
 }
 
 footer .player .player-right .media-control #current-volume a {

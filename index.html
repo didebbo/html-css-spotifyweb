@@ -452,27 +452,33 @@
                     <ul class="album">
                         <ul class="item">
                             <li class="image">
-                                <img src="images/player_left.jpg">
+                                <a href="#">
+                                    <img src="images/player_left.jpg">
+                                </a>
                             </li>
                             <ul class="info">
                                 <li class="title">
-                                    Clark Griswold
+                                    <a href="#">
+                                        Lucio Dalla
+                                    </a>
                                 </li>
                                 <li class="subtitle">
-                                    Hilltop Hoods
+                                    <a href="#">
+                                        Attenti Al Lupo
+                                    </a>
                                 </li>
                             </ul>
                         </ul>
                     </ul>
                     <ul class="actions">
-                        <li class="heart">
+                        <li id="heart">
                             <a href="#">
-                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
                             </a>
                         </li>
-                        <li class="folder">
+                        <li id="folder">
                             <a href="#">
-                                <i class="far fa-folder"></i>
+                                <i class="fas fa-folder"></i>
                             </a>
                         </li>
                     </ul>
@@ -510,17 +516,19 @@
                     <ul class="status">
                         <li>
                             <a href="#">
-                                0:25
+                                0:40
                             </a>
                         </li>
-                        <li id="current-status">
+                        <li onmouseleave="stop()" onmouseover="play()" id="current-status">
                             <a href="#">
-
+                                <audio id="music">
+                                    <source src="audio/music.mp3" type="audio/ogg">
+                                </audio>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                4:35
+                                4:20
                             </a>
                         </li>
                     </ul>
@@ -539,8 +547,8 @@
                         </a>
                     </li>
                     <li id="volume">
-                        <button>
-                            <i class="fas fa-volume-up"></i>
+                        <button onfocus="mute()" onfocusout="unmute()">
+                            <i class=" fas fa-volume-up"></i>
                             <i class="fas fa-volume-mute"></i>
                         </button>
                     </li>
@@ -553,6 +561,9 @@
     </footer>
     <!-- /Footer -->
 
+    <!-- Javascript -->
+    <script src="js/play.js"></script>
+    <!-- /Javascript -->
 </body>
 
 </html>

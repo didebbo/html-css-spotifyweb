@@ -110,7 +110,6 @@ main aside .logo .lg-logo {display: none;}
 /* ANCHOR Navbar */
 main aside .nav {
     margin-top: 5px;
-    
 }
 
 main aside .nav > ul {
@@ -152,6 +151,10 @@ main aside .nav i {
         justify-content: center;
     }
     
+    main aside .nav > ul > li > a > img {
+    margin-right: 0;
+    }
+
     main aside .nav i {
     margin-right: 0;
 }
@@ -274,6 +277,7 @@ main aside .bottom > ul > li:first-child > a > i  {
     border: 1px solid #707070;
     color: #000;
     border-radius: 50%;
+    transition: 0.2s;
 }
 
 main aside .bottom > ul > li:first-child > a:hover i {
@@ -461,7 +465,6 @@ main .main-app .middle .content .recent-play .list .card .album img {
 main .main-app .middle .content .recent-play .list .card .info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 5px 0;
 }
 
@@ -764,11 +767,23 @@ footer .player .player-center .player-control .status {
 }
 
 footer .player .player-center .player-control .status > li {
+    display: flex;
     padding: 0 10px;
 }
 
 footer .player .player-center .player-control .status > li > a {
+    display: flex;
+    width: 100%;
     color: #fff;
+}
+
+footer .player .player-center .player-control .status > li:first-child,
+footer .player .player-center .player-control .status > li:last-child {
+    width: 10%;
+}
+
+footer .player .player-center .player-control .status > li:first-child a {
+    justify-content: flex-end;
 }
 
 footer .player .player-center .player-control .status #current-status {

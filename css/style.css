@@ -655,15 +655,23 @@ footer .player .player-left .items .album {
 
 footer .player .player-left .items .album .item {
     display: flex;
+    /* border: 2px solid orange; */
+
 }
 
 footer .player .player-left .items .album .item .image {
     display: flex;
     margin-right: 10px;
+    /* border: 2px solid red; */
+
 }
 
 footer .player .player-left .items .album .item .image img {
+    width: 40px;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border: 2px solid green; */
 }
 
 footer .player .player-left .items .album .item .info {

@@ -639,33 +639,38 @@ footer .player > li:last-child {
 /* ANCHOR Player Left */
 footer .player .player-left {
     display: flex;
+    height: 100%;
     justify-content: space-between;
     padding: 10px;
 }
 
 footer .player .player-left .items {
     display: flex;
+    height: 100%;
     width: 100%;
     justify-content: space-between;
 }
 
+footer .player .player-left .items > li {
+    height: 100%;
+} 
+
 footer .player .player-left .items > li .album {
     display: flex;
     height: 100%;
-    border:2px solid red;
 }
 
 footer .player .player-left .items > li .album > li {
-    border: 2px solid orange;
+    height: 100%;
 }
 
 footer .player .player-left .items > li .album .image {
+    height: 100%;
     margin-right: 10px;
 }
 
 footer .player .player-left .items > li .album .image img {
     height: 100%;
-    border: 2px solid green;
 }
 
 footer .player .player-left .items > li .album .info {

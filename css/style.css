@@ -649,43 +649,37 @@ footer .player .player-left .items {
     justify-content: space-between;
 }
 
-footer .player .player-left .items .album {
+footer .player .player-left .items > li .album {
     display: flex;
-}
-
-footer .player .player-left .items .album .item {
-    display: flex;
-    border: 2px solid orange;
-
-}
-
-footer .player .player-left .items .album .item .image {
-    display: flex;
-    margin-right: 10px;
-    border: 2px solid red;
-
-}
-
-footer .player .player-left .items .album .item .image img {
-    width: 40px;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    border:2px solid red;
+}
+
+footer .player .player-left .items > li .album > li {
+    border: 2px solid orange;
+}
+
+footer .player .player-left .items > li .album .image {
+    margin-right: 10px;
+}
+
+footer .player .player-left .items > li .album .image img {
+    height: 100%;
     border: 2px solid green;
 }
 
-footer .player .player-left .items .album .item .info {
+footer .player .player-left .items > li .album .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
 }
 
-footer .player .player-left .items .album .item .info .title a {
+footer .player .player-left .items > li .album .info .title a {
     color: #fff;
 }
 
-footer .player .player-left .items .album .item .info .subtitle a {
+footer .player .player-left .items > li .album .info .subtitle a {
     color: #707070;
     font-size: 0.9em;
 }
@@ -695,17 +689,17 @@ footer .player .player-left .items .actions {
     align-items: center;
 }
 
-footer .player .player-left .items .actions > li {
+footer .player .player-left .items > li .actions > li {
     padding: 5px;
 }
 
 @media screen and (max-width: 1100px) {
-    footer .player .player-left .items .actions {
+    footer .player .player-left .items > li .actions {
         flex-direction: column;
         justify-content: center;
     }
 
-    footer .player .player-left .items .actions > li {
+    footer .player .player-left .items > li .actions > li {
         padding: 2.5px;
     }
 }
@@ -732,6 +726,7 @@ footer .player .player-left .items .actions > #folder > a:hover {
 /* ANCHOR Player Center */
 footer .player .player-center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-grow: 1;
 }

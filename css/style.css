@@ -658,6 +658,8 @@ footer .player .player-left .items > li {
 footer .player .player-left .items > li .album {
     display: flex;
     height: 100%;
+    /* border: 1px solid red; */
+    overflow: hidden;
 }
 
 footer .player .player-left .items > li .album > li {
@@ -670,14 +672,16 @@ footer .player .player-left .items > li .album .image {
 }
 
 footer .player .player-left .items > li .album .image img {
-    height: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
 }
 
 footer .player .player-left .items > li .album .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
 }
 
 footer .player .player-left .items > li .album .info .title a {

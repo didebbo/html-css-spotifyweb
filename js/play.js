@@ -1,5 +1,6 @@
 var dom_music = document.getElementById("music");
-dom_music.currentTime = 40;
+strat_to = 49;
+dom_music.currentTime = strat_to;
 
 var dom_current_time = document.getElementById("current_time");
 
@@ -11,7 +12,7 @@ function play() {
 
 function stop() {
     dom_music.pause();
-    dom_music.currentTime = 40;
+    dom_music.currentTime = strat_to;
 }
 
 function mute() {
@@ -25,8 +26,9 @@ function unmute() {
 setInterval(() => {
     var curr_minutes = String(Math.floor(dom_music.currentTime / 60));
     var curr_seconds = String((Math.floor(dom_music.currentTime) - curr_minutes * 60));
-    if (curr_seconds.length < 2) seconds = "0" + seconds;
+    if (curr_seconds.length < 2) curr_seconds = "0" + curr_seconds;
     dom_current_time.innerHTML = curr_minutes + ":" + curr_seconds;
+    console.log(dom_current_time.innerHTML);
 
     var duration_minutes = String(Math.floor(dom_music.duration / 60));
     var duration_seconds = String((Math.floor(dom_music.duration) - duration_minutes * 60));

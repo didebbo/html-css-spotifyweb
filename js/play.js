@@ -1,5 +1,5 @@
 var dom_music = document.getElementById("music");
-strat_to = 49;
+strat_to = 40;
 dom_music.currentTime = strat_to;
 
 var dom_current_time = document.getElementById("current_time");

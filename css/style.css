@@ -345,7 +345,11 @@ main .main-app > .header .cta-upgrade:hover {
 
 /* ANCHOR Middle */
 main .main-app .middle {
-    overflow: auto;
+    overflow: auto
+}
+
+main .main-app .middle::-webkit-scrollbar {
+    display: none;
 }
 
 main .main-app .middle > nav {
@@ -658,7 +662,6 @@ footer .player .player-left .items > li {
 footer .player .player-left .items > li .album {
     display: flex;
     height: 100%;
-    /* border: 1px solid red; */
     overflow: hidden;
 }
 
@@ -668,12 +671,13 @@ footer .player .player-left .items > li .album > li {
 
 footer .player .player-left .items > li .album .image {
     height: 100%;
+    overflow: hidden;
     margin-right: 10px;
 }
 
 footer .player .player-left .items > li .album .image img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
